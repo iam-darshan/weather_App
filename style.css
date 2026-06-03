@@ -1,0 +1,288 @@
+body{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+
+    background: linear-gradient(
+    90deg,
+
+    #5a3fff 0%,
+    #5a3fff 12.5%,
+
+    #6b58ff 12.5%,
+    #6b58ff 25%,
+
+    #7b72ff 25%,
+    #7b72ff 37.5%,
+
+    #8a8cff 37.5%,
+    #8a8cff 50%,
+
+    #99a5ff 50%,
+    #99a5ff 62.5%,
+
+    #a8beff 62.5%,
+    #a8beff 75%,
+
+    #9ecfff 75%,
+    #9ecfff 87.5%,
+
+    #8fdfff 87.5%,
+    #8fdfff 100%
+);
+
+}
+
+.nav{
+    height: 15vh;
+    width: 100%;
+   
+    background-color: rgba(255,255,255,0.4);
+    box-shadow: 0px 8px 32px rgb(85, 84, 84);
+
+
+    /* background:
+    radial-gradient(circle at 15% 15%, rgba(255,255,255,0.25) 0%, transparent 20%),
+    radial-gradient(circle at 85% 25%, rgba(255,255,255,0.15) 0%, transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1) 0%, transparent 30%),
+    linear-gradient(135deg,#0f4c81,#3b82f6,#60a5fa); */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+#city{
+    font-family:"Jost", "Poppins", "Raleway";
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px 20px;
+    width: fit-content;
+}
+
+.glass {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: capitalize;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.2);
+
+    border-radius: 24px;
+
+}
+
+.main{
+    height: 85vh;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+
+
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+    width: 35vw;
+    height: 50vh;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+
+}
+
+#celsius{
+    font-size: 150px;
+    font-family: 'Jost','Varela Round', sans-serif;
+    font-weight: 600;
+
+}
+
+#weatherIcon{
+    width: 150px;
+    height: auto;
+    
+    left: 55%;
+    margin-right: 100px;
+    position: absolute;
+
+}
+
+.info{
+    width: 25vw;
+    height: 70vh;
+    margin-top: 5vh;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#moreInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.insideInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    width: 90%;
+    padding:8px 0px;
+    font-family: "Poppins";
+
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+
+
+}
+
+#leftInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Google Sans";
+}
+
+.location{
+    text-align: center;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.condition{
+    height: 20;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+    
+}
+
+#conditionText{
+    text-align: center;
+    font-family: "Jost","Poppins";
+    font-size: 25px;
+}
+
+.rainProb{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    height: 100px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+
+}
+
+.rainText{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    
+    font-family: "Raleway";
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#rainProbability{
+    font-family: "Poppins";
+}
+
+.fa-solid{
+    font-size: 30px;
+}
+.fas{
+    font-size: 30px;
+}
