@@ -4,7 +4,8 @@ navigator.geolocation.getCurrentPosition((position)=>{
     lat=position.coords.latitude
     lon=position.coords.longitude;
 
-    fetch(`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
+    // fetch(`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
+    fetch("https://corsproxy.io/?https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=11.30496,75.8218752&aqi=yes")
     .then(response=>{
         return response.json()
     })
@@ -15,7 +16,7 @@ navigator.geolocation.getCurrentPosition((position)=>{
         icon=icon.replace("64x64","128x128")
         document.getElementById("weatherIcon").src=icon;
         document.getElementById("city").textContent=data.location.name;
-        document.getElementById("airquality").textContent=data.current.air_quality["us-epa-index"];
+        document.getElementById("airquality").textContent=airQuality(data.current.air_quality["us-epa-index"]);
         document.getElementById("windSpeed").textContent=data.current.wind_kph + " KMPH";
         document.getElementById("humidityVal").textContent =data.current.humidity +"%";
         document.getElementById("area").textContent =data.location.name;
@@ -30,3 +31,24 @@ navigator.geolocation.getCurrentPosition((position)=>{
     
 })
 
+
+
+function airQuality(value){
+    switch (value) {
+        case 1:
+            return "Good"
+    
+        case 2:
+            return "Moderate"
+        case 3:
+            return "Sensitive"
+        case 4:
+            return "Unhealthy"
+        case 5:
+            return "Very Unhealthy"
+        case 6:
+            return "Hazardous"
+        default:
+            return "Good"
+    }
+}
