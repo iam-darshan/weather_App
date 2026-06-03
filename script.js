@@ -4,7 +4,7 @@ navigator.geolocation.getCurrentPosition((position)=>{
     lat=position.coords.latitude
     lon=position.coords.longitude;
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
     .then(response=>{
         return response.json()
     })
