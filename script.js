@@ -5,7 +5,8 @@ navigator.geolocation.getCurrentPosition((position) => {
     lon = position.coords.longitude;
 
     // fetch(`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
-    fetch('https://proxy.corsfix.com/?' +`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
+    // fetch('https://proxy.corsfix.com/?' +`https://api.weatherapi.com/v1/current.json?key=bbfad02fb6514b2cb08165523260206&q=${lat},${lon}&aqi=yes`)
+    fetch(`/api/weather?lat=${lat}&lon=${lon}`)
         .then(response => {
             return response.json()
         })
